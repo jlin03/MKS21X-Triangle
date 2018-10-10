@@ -6,6 +6,11 @@ public class Point{
     y=Y;
   }
 
+  public Point(Point p) {
+    x=p.getX();
+    y=p.getY();
+  }
+
   public double getX(){
     return x;
   }

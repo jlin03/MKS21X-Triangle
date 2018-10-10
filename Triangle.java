@@ -1,14 +1,26 @@
 public class Triangle {
-	private Point p1,p2,p3;
+	private Point[] p = new Point[3];
 	
 	public Triangle(Point one, Point two, Point three) {
-		p1 = one;
-		p2 = two;
-		p3 = three;
+		p[0] = one;
+		p[1] = two;
+		p[2] = three;
 	}
+
+	public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {	
+		p[0] = new Point(x1,y1);
+		p[1] = new Point(x2,y2);
+		p[2] = new Point(x3,y3);
+	}
+ 
+	public Point getVertex(int index) {
+		Point r = new Point(p[index]);
+		return(r);
+	}
+
 	
 	public double getPerimeter() {
-		return(Point.distance(p1,p2) + Point.distance(p2,p3) + Point.distance(p3,p1));
+		return(Point.distance(p[0],p[1]) + Point.distance(p[1],p[2]) + Point.distance(p[2],p[0]));
 	}
 	
 }
