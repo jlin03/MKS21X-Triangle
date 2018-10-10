@@ -22,5 +22,11 @@ public class Triangle {
 	public double getPerimeter() {
 		return(Point.distance(p[0],p[1]) + Point.distance(p[1],p[2]) + Point.distance(p[2],p[0]));
 	}
+
+	public String toString() {
+		return("Triangle " + "A(" + p[0].getX() + "," + p[0].getY() + ") " + "B(" + p[1].getX() + "," + p[1].getY() + ") " + "C(" + p[2].getX() + "," + p[2].getY() + ") ")
+
+
+	}
 	
 }
